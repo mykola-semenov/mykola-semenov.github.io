@@ -1,0 +1,28 @@
+entries:
+    - title: About
+      url: about
+    # - title: Blog
+    #   post_list:
+    #       limit: 5
+    #       show_archive: true
+    #       archive_url: archive.html
+    # - title: Projects
+    #   post_list:
+    #       category: project
+    #       show_archive: false
+    - title: RSS
+      url: feed.xml
+    - title: Social
+      entries:
+          - title: GitHub
+            url: https://github.com/mykola-semenov
+          - title: LinkedIn
+            url: https://www.linkedin.com/in/mykola-semenov
+          - title: ResearchGate
+            url: https://www.researchgate.net/profile/Mykola-Semenov-2
+          - title: Instagram
+            url: https://www.instagram.com/mykola_semenov
+          - title: Twitter
+            url: https://twitter.com/mykola_semenov
+          - title: Facebook
+            url: https://www.facebook.com/mykolai.semenov

@@ -1,12 +1,24 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <title>{{ page.title }} - {{ site.title }}</title>
-    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
-  </head>
-  <body>
-    {{ content }}
-  </body>
+<html lang="{{ page.lang | default: 'en' }}">
+    {%- include head.html -%}
+
+    <body>
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+                {{ content }}
+            </div>
+        </main>
+
+        {% if page.custom_js %}
+        {% for js_file in page.custom_js %}
+        <script type="text/javascript" src="{{ site.baseurl }}/assets/js/{{ js_file }}.js"></script>
+        {% endfor %}
+        {% endif %}
+
+        {%-if site.goat_counter and jekyll.environment == "production"-%}
+        <script data-goatcounter="https://{{ site.goat_counter }}.goatcounter.com/count" async
+            src="//gc.zgo.at/count.js"></script>
+        {%-endif-%}
+    </body>
+
 </html>

@@ -1,3 +1,18 @@
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "" # the subpath of your site, e.g. /blog
-title: "" # the name of your site, e.g. ACME Corp.
+title: Mykola Semenov
+url: https://mykola-semenov.github.io
+baseurl: ""
+description: >
+    Machine Learning, Computational Methods, and Software Development
+
+permalink: /:slug
+
+goat_counter: "mykola-semenov"
+
+date_format: "%Y-%m-%d"
+
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
