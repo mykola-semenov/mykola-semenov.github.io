@@ -1,0 +1,25 @@
+<ul>
+    {%-for item in include.entries-%}
+    <li>
+        {%- if item.url -%}
+        <a href="{{ item.url }}">{{ item.title }}</a>
+        {%- else -%}
+        {{ item.title }}
+        {%- endif -%}
+    </li>
+
+    {%-if item.post_list-%}
+    {%
+    include post_list.html
+    category=item.post_list.category
+    limit=item.post_list.limit
+    show_archive=item.post_list.show_archive
+    archive_url=item.post_list.archive_url
+    -%}
+    {%-endif-%}
+
+    {%-if item.entries-%}
+    {%-include menu_item.html entries=item.entries-%}
+    {%-endif-%}
+    {%-endfor-%}
+</ul>
